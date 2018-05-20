@@ -2,10 +2,8 @@
 
 const mongoose          = require('mongoose');
 const environment       = require('../environment/environment').environment;
-const constants         = require('../app/utils/constants').mongoMessages;
 
-const Questionnaire     = require('../app/models/questionnaire');
-const PatientService    = require('../app/models/patientService');
+const Employee     = require('../app/models/employee');
 
 (function(){
     const mongoDB = environment.mongo;
@@ -23,7 +21,7 @@ const PatientService    = require('../app/models/patientService');
     Object.keys(collections).forEach(function (k) {
         collectionNames.push(k);
     });
-    console.log(constants.collections);
+    console.log('List of collections present');
     console.log(collectionNames);
     /******************* display list of collections - end */
 })();

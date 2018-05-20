@@ -1,21 +1,22 @@
 'use strict';
 var mongoose        = require('mongoose');
-const Questionnaire = mongoose.model('Questionnaire');
+const Employee = mongoose.model('employee');
 const logger        = require('../utils/utils').logger;
 
-//list all questionnaire present in DB
-exports.list_all_questionnaire = function (req, res) {
-  Questionnaire.findOne({}, function (err, questionnaire) {
+//list all employee present in DB
+exports.list_all_employee = function (req, res) {
+  Employee.findOne({}, function (err, employee) {
     if (err) {
       logger.error('error fetching successfully ', err);
       res.send(err);
     } else {
       logger.info('questionnaire fetched successfully');
-      res.json(questionnaire);
+      res.json(employee);
     }
   });
 };
 
+/*
 //Create new questionnaire
 exports.create = function (req, res) {
   var new_questionnaire = new Questionnaire(req.body);
@@ -73,3 +74,5 @@ exports.delete = function (req, res) {
     });
   });
 };
+
+*/
