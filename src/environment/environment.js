@@ -12,7 +12,7 @@ exports.environment = (function () {
   const mongoConnection = "mongodb://" + mongo.userName + ":" + mongo.password + "@localhost:27017/" + mongo.dbName;
 
   const app = {
-    "port": "8080",
+    "port": "8081",
     "secretKey": "omms-express"
   };
 
