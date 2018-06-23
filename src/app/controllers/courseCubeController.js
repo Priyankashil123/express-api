@@ -68,7 +68,12 @@ let courseCube = [
   ];
 //list all courseCube present in DB
 exports.list_all_courseCube = function (req, res) {
-  res.json(courseCube);
+  if(req.headers.coursecubeid == '123456789'){
+    res.json(courseCube);
+  }else{
+    res.json({'message':'not authorized'});
+  }
+  
 };
 
 //list all courseCube present in DB

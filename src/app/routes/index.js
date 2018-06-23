@@ -1,10 +1,9 @@
 'use strict';
-//const employeeRoutes = require('./employeeRoutes');
-const userRoutes = require('./userRoutes');
+
 const courseCubeRoutes = require('./courseCubeRoutes');
+const studentRoutes = require('./studentRoutes');
 
 module.exports = function (app) {
-  //employeeRoutes(app);
-  userRoutes(app);
   courseCubeRoutes(app);
+  studentRoutes(app);
 };
