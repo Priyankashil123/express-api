@@ -4,6 +4,8 @@ module.exports = function (app) {
 
     app.route('/student')
         .get(student.list_all_student)
-        .post(student.save);
+        .put(student.save)
+        .post(student.update)
+        .delete(student.delete);
 
 };
